@@ -31,7 +31,6 @@ Simple to configure, fast to execute, and easy to build off of.
 
 
 
- Demo video included!
 
 ---
 
