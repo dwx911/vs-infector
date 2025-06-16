@@ -1,0 +1,19 @@
+# Build output
+x64/
+x86/
+*.obj
+*.pdb
+*.exe
+*.ilk
+*.log
+
+# VS files
+.vs/
+*.VC.db
+*.VC.opendb
+*.user
+*.suo
+
+# OS files
+Thumbs.db
+.DS_Store
