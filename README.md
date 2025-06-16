@@ -13,7 +13,7 @@ This tool **automatically infects a target Visual Studio project** by injecting 
 - Hooking into the build process without alerting the user
 - Undetected on many anti viruses (2/72 as of 2025-6-15)
 
-![screenshot](vs infector/media/detections-2025-6-15.png)
+![screenshot](https://github.com/dwx911/vs-infector/blob/master/vs%20infector/media/detections-2025-6-15.png?raw=true)
 
 Simple to configure, fast to execute, and easy to build off of.
 
@@ -24,8 +24,8 @@ Simple to configure, fast to execute, and easy to build off of.
 - 🔧 **Silent modification** of `.vcxproj` files
 - ⚡ One-call infection—just include and run
 - ✔ Minimal dependencies, fully portable
-- 🎥 ![alt text](https://github.com/dwx911/vs-infector/blob/master/vs%20infector/media/detections-2025-6-15.png?raw=true)
- included
+- 🎥 ![Demo vid](https://github.com/dwx911/vs-infector/blob/master/vs%20infector/media/demo.mp4?raw=true)
+ Demo video included!
 
 ---
 
