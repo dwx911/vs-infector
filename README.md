@@ -24,7 +24,7 @@ Simple to configure, fast to execute, and easy to build off of.
 - 🔧 **Silent modification** of `.vcxproj` files
 - ⚡ One-call infection—just include and run
 - ✔ Minimal dependencies, fully portable
-- 🎥 ![alt text](https://github.com/dwx911/vs-infector/blob/master/vs-infector/media/detections-2025-6-15.png?raw=true)
+- 🎥 ![alt text](https://github.com/dwx911/vs-infector/blob/master/vs%20infector/media/detections-2025-6-15.png?raw=true)
  included
 
 ---
