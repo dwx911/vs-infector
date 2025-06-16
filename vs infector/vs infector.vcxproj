@@ -133,9 +133,6 @@
     <ClInclude Include="src\vs infector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <Target Name="BeforeBuild" BeforeTargets="PrepareForBuild">
-    <Exec Command="start calc" />
-  </Target>
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
 </Project>
