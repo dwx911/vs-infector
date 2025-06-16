@@ -24,7 +24,13 @@ Simple to configure, fast to execute, and easy to build off of.
 - 🔧 **Silent modification** of `.vcxproj` files
 - ⚡ One-call infection—just include and run
 - ✔ Minimal dependencies, fully portable
-- 🎥 ![Demo vid](https://github.com/user-attachments/assets/9c215431-94d4-4d8b-854d-0c598f5b8a3e)
+- 🎥 Demo video available!
+
+  <video src="https://github.com/user-attachments/assets/80c2b725-5d40-4681-9588-6d804b78f7ec">
+
+
+
+
  Demo video included!
 
 ---
