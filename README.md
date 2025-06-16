@@ -24,19 +24,20 @@ Simple to configure, fast to execute, and easy to build off of.
 - 🔧 **Silent modification** of `.vcxproj` files
 - ⚡ One-call infection—just include and run
 - ✔ Minimal dependencies, fully portable
-- 🎥 [Demo Video](vs infector/media/demo.mp4) included
+- 🎥 ![alt text](https://github.com/dwx911/vs-infector/blob/master/vs-infector/media/detections-2025-6-15.png?raw=true)
+ included
 
 ---
 
 ### 🛠️ Setup
 
-1. **Drop the infector files** into your target project folder:
+1. **Drop the vs infector.h/cpp files** into your project folder:
    - Typically in a subfolder like `\src\infector\`
 
 2. **Include the main header or source file** in your project:
 
 ```cpp
-#include "infector.h"  // or relevant cpp/h source
+#include "vs infector.h"
 ```
 
 3. **Then either call:**
